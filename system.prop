@@ -14,18 +14,13 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.line
 # Charger
 ro.charger.enable_suspend=true
 
-# CNE module
-persist.vendor.cne.feature=1
-
 # Netflix custom property
 ro.netflix.bsp_rev=Q855-16947-1
 
 # Radio
 persist.radio.dynamic_sar=false
-persist.radio.multisim.config=dsds
 persist.radio.NO_STAPA=1
 persist.radio.VT_HYBRID_ENABLE=1
 ril.subscription.types=NV,RUIM
 ro.telephony.default_cdma_sub=0
-ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1

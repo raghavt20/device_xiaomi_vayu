@@ -271,14 +271,14 @@ PRODUCT_PACKAGES += \
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
     bt \
-    perf
+    perf \
+    telephony
 
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
-    $(LOCAL_PATH)/configs/permissions/system_ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml
+    $(LOCAL_PATH)/configs/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -287,11 +287,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlay \
-    libjson \
-    libril \
-    librilutils \
-    librmnetctl
+    CarrierConfigOverlay
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -312,18 +308,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Telephony
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
@@ -361,8 +345,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
-    ipacm \
-    IPACM_cfg.xml \
     libwifi-hal-qcom \
     libwpa_client \
     WifiOverlay \
